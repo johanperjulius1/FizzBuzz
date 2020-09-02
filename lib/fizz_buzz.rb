@@ -1,11 +1,16 @@
+
 def fizz_buzz(numberArgument)
-  if (numberArgument % 15) == 0
+  if has_zero_remainder?(numberArgument, 15)
    return 'fizz buzz'
-  elsif (numberArgument % 5) == 0
+  elsif has_zero_remainder?(numberArgument, 5)
    return 'buzz'
-  elsif (numberArgument % 3) == 0
+  elsif has_zero_remainder?(numberArgument, 3)
     return 'fizz'
   else
     return numberArgument
   end
+end
+
+def has_zero_remainder?(numberArgument, divisorArgument)
+  numberArgument % divisorArgument == 0
 end
